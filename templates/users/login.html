@@ -14,16 +14,19 @@
         </a>
     </div>
 </header>
-<main class="login">
-    <div class="form-container">
+<main class="user-form">
+    <div class="user-form-container">
         <form action="{% url 'login' %}" method="POST">
             {% csrf_token %}
             {% for field in form.visible_fields %}
-                <label for="{{ field.id_for_labe }}">{{ field.label }}</label>
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                 {{ field }}
             {% endfor %}
             <input class="submit-btn" type="submit" value="Entrar">
         </form>
+        <div class="form-redirect">
+            <p>Ainda não tem uma conta? <a href="{% url 'sign_up' %}">Cadastre se</a></p>
+        </div>
     </div>
 </main>
 {% endblock %}

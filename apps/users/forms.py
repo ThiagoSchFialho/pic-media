@@ -7,17 +7,49 @@ class LoginForm(forms.Form):
         max_length=100,
         widget = forms.TextInput(
             attrs={
-                "class": "login-input"
+                "class": "user-form-input"
             }
         )
     )
 
-    password = forms.CharField(
+    login_password = forms.CharField(
         label="Senha",
         required=True,
         widget = forms.PasswordInput(
             attrs={
-                "class": "login-input"
+                "class": "user-form-input"
+            }
+        )
+    )
+
+class SignUpForm(forms.Form):
+    sigin_up_name = forms.CharField(
+        label="Nome de usuário",
+        required=True,
+        max_length=100,
+        widget = forms.TextInput(
+            attrs={
+                "class": "user-form-input"
+            }
+        )
+    )
+
+    sign_up_password_1 = forms.CharField(
+        label="Senha",
+        required=True,
+        widget = forms.PasswordInput(
+            attrs={
+                "class": "user-form-input"
+            }
+        )
+    )
+
+    sign_up_password_2 = forms.CharField(
+        label="Confirme a Senha",
+        required=True,
+        widget = forms.PasswordInput(
+            attrs={
+                "class": "user-form-input"
             }
         )
     )
