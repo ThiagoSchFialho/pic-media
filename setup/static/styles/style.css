@@ -14,7 +14,7 @@ header {
     padding: 10px 50px;
     width: 100%;
     height: 70px;
-    background-color: #0f4545;
+    background-color: #151E3F;
 }
 
 header .logo {
@@ -55,7 +55,6 @@ main.index {
 
 main.index .banner-container {
     padding: 5% 10%;
-    height: calc(100vh - 70px);
     background-color: rgba(0, 0, 0, 0);
     backdrop-filter: blur(5px);
     min-height: 275px;
@@ -70,17 +69,73 @@ main.index .banner-navigation-buttons {
 }
 
 main.index .banner-navigation-buttons a {
-    background-color: #4bc7c7ea;
+    background-color: #00A7E1;
     text-decoration: none;
     font-weight: 700;
     font-size: 18pt;
     padding: 10px 20px;
     border-radius: 7px;
     color: white;
-    box-shadow: 0px 3px 5px #0f4545;
+    box-shadow: 0px 3px 5px #000000af;
 }
 
-main.index .banner-navigation-buttons a:hover {
-    background-color: #4bc7c7da;
-    box-shadow: inset 0px 0px 5px #369292da;
+main.index .banner-navigation-buttons a:focus {
+    box-shadow: inset 0px 0px 5px #000000af;
+}
+
+main.login {
+    height: calc(100vh - 70px);
+    background-color: #030027;
+}
+
+main.login .form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 60px 60px;
+    border-radius: 10px;
+    background-color: #FAC9B8;
+    box-shadow: 0px 0px 100px #00A7E180;
+}
+
+main.login .form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+main.login .form-container form label {
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+main.login .form-container form .login-input {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 12px 24px;
+    font-size: 12pt;
+    background-color: #DB8A74;
+    border: 2px solid #403233;
+}
+
+main.login .form-container form .submit-btn {
+    width: 50%;
+    margin: 20px auto 0 auto;
+    font-size: 13pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 10px;
+    background-color: #548C2F;
+    border: 2px solid #104911;
+    cursor: pointer;
+}
+
+main.login .form-container form .submit-btn:focus {
+    box-shadow: inset 0px 0px 5px #104911;
 }
