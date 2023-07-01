@@ -1,9 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 def index(request):
-    user_is_authenticated = False
-
     if request.user.is_authenticated:
-        user_is_authenticated = True
+        return redirect("gallery")
         
-    return render(request, 'gallery/index.html', {"user_is_authenticated": user_is_authenticated})
+    return render(request, 'gallery/index.html')
+
+def gallery(request):
+    if not request.user.is_authenticated:
+        return redirect("login")
+
+    return render(request, 'gallery/gallery.html', {"user_is_authenticated": True})
