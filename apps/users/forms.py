@@ -23,7 +23,7 @@ class LoginForm(forms.Form):
     )
 
 class SignUpForm(forms.Form):
-    sigin_up_name = forms.CharField(
+    sign_up_name = forms.CharField(
         label="Nome de usuário",
         required=True,
         max_length=100,
