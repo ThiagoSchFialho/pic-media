@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <title>Pic Media</title>
+</head>
+<body>
+    {% include 'common/partials/_header.html' %}
+    <main class="gallery">
+        {% include 'gallery/partials/_search_bar.html' %}
+        {% include 'gallery/partials/_side_menu.html' %}
+        {% block content %}
+        {% endblock %}
+    </main>
+    {% include 'common/partials/_footer.html' %}
+</body>
+</html>

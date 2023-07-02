@@ -1,0 +1,13 @@
+{% extends 'gallery/gallery_base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-gallery-container">
+    {% for picture in pictures %}
+        <div class="picture">
+            <a href="{% url 'login' %}">
+                <div class="picture-anchor"></div>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -41,11 +41,11 @@ header .user-log-in-text {
     font-size: 11pt;
     margin-top: 3px;
     margin-right: 10px;
-    color: white;
+    color: #E4FDE1;
 }
 
 header .logout-btn a {
-    color: white;
+    color: #E4FDE1;
     font-size: 15pt;
     text-decoration: none;
 }
@@ -53,7 +53,7 @@ header .logout-btn a {
 footer {
     padding: 10px 20px;
     background-color: #151E3F;
-    color: white;
+    color: #E4FDE1;
 }
 
 .footer-content {
@@ -62,7 +62,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     background-color: #151E3F;
-    color: white;
+    color: #E4FDE1;
 }
 
 .footer-content ul {
@@ -75,7 +75,7 @@ footer {
 }
 
 .footer-content a {
-    color: white;
+    color: #E4FDE1;
     text-decoration: none;
 }
 
@@ -89,7 +89,7 @@ footer h2 {
 }
 
 .credits a {
-    color: white;
+    color: #E4FDE1;
 }
 
 main.index {
@@ -119,7 +119,7 @@ main.index .banner-navigation-buttons a {
     font-size: 18pt;
     padding: 10px 20px;
     border-radius: 7px;
-    color: white;
+    color: #E4FDE1;
     box-shadow: 0px 3px 5px #000000af;
 }
 
@@ -173,7 +173,7 @@ main.user-form {
     font-size: 12pt;
     font-weight: bold;
     letter-spacing: 1px;
-    color: white;
+    color: #E4FDE1;
     padding: 4px 8px;
     border-radius: 10px;
     background-color: #548C2F;
@@ -191,4 +191,102 @@ main.user-form {
 
 .user-form-container .form-redirect p {
     text-align: center;
+}
+
+main.gallery {
+    position: relative;
+    min-height: calc(100vh - 63px);
+}
+
+main.gallery .search-bar-container {
+    height: 150px;
+}
+
+.search-bar-container form {
+    padding-top: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar-container .search-bar {
+    width: 50%;
+}
+
+.search-bar-container form input {
+    padding: 10px 20px;
+    width: calc(100% - 100px);
+    outline: none;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 14pt;
+    color: #E4FDE1;
+    background-color: #333533;
+}
+
+.search-bar-container form button {
+    margin-left: -6px;
+    padding: 10px 20px;
+    width: 100px;
+    border: none;
+    border-left: 2px solid #E4FDE1;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 14pt;
+    color: #E4FDE1;
+    background-color: #333533;
+    cursor: pointer;
+}
+
+main.gallery .side-menu-container {
+    padding: 40px 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 160px;
+    height: calc(100% - 150px);
+    background-color: #00A7E1;
+    border-top-right-radius: 5px;
+}
+
+.side-menu-container ul {
+    list-style-type: none;
+}
+
+.side-menu-container li {
+    margin-bottom: 25px;
+}
+
+.side-menu-container a {
+    display: flex;
+    text-decoration: none;
+    font-weight: bold;
+    color: #E4FDE1;
+}
+
+.side-menu-container p {
+    margin-left: 10px;
+}
+
+.main-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 170px;
+}
+
+.main-gallery-container .picture {
+    background-color: #D74E09;
+    border-radius: 5px;
+    margin: 15px;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.main-gallery-container .picture-anchor {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }

@@ -1,0 +1,9 @@
+<div class="search-bar-container">
+    <form action="{% url 'main_gallery' %}" method="POST">
+        {% csrf_token %}
+        <div class="search-bar">
+            <input type="text" name="search" id="search" placeholder="Buscar">
+            <button type="submit">buscar</button>
+        </div>
+    </form>
+</div>

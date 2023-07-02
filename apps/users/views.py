@@ -22,7 +22,7 @@ def login(request):
 
             if user is not None:
                 auth.login(request, user)
-                return redirect("gallery")
+                return redirect("main_gallery")
             
             else:
                 return redirect("login")
