@@ -12,8 +12,10 @@
     <main class="gallery">
         {% include 'gallery/partials/_search_bar.html' %}
         {% include 'gallery/partials/_side_menu.html' %}
-        {% block content %}
-        {% endblock %}
+        <div style="margin-left: 230px;">
+            {% block content %}
+            {% endblock %}
+        </div>
     </main>
     {% include 'common/partials/_footer.html' %}
 </body>

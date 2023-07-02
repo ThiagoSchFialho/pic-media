@@ -1,0 +1,18 @@
+{% extends 'gallery/gallery_base.html' %}
+{% load static %}
+{% block content %}
+<div class="upload-form-container">
+    <h1>Para enviar uma imagem</h1>
+    <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for field in form.visible_fields %}
+        <div>
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label><br>
+            {{ field }}
+        </div>
+        {% endfor %}
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+<div style="height: 50px;"></div>
+{% endblock %}
