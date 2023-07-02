@@ -3,13 +3,15 @@
 {% block content %}
 <div class="main-gallery-container">
     {% for picture in pictures %}
-        <div class="picture">
+        <div class="picture-container">
             <div class="picture-front-layer">
                 <a href="">
-                    <div class="picture-anchor"></div>
+                    <div class="picture-anchor">
+                        <img src="{{ picture.picture.url }}">
+                    </div>
                 </a>
                 <div class="picture-info">
-                    <div class="picture-author">Por: <br>thiago scheffer fialho</div>
+                    <div class="picture-author">Por: <br>{{ picture.author }}</div>
                     <div class="picture-commands">
                         <div class="picture-command-add picture-command">
                             <a href="">
