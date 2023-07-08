@@ -1,14 +1,24 @@
 {% extends 'gallery/gallery_base.html' %}
 {% load static %}
 {% block content %}
+<div class="search-bar-container">
+    <form action="{% url 'main_gallery' %}" method="POST">
+        {% csrf_token %}
+        <div class="search-bar">
+            <input type="text" name="search" placeholder="Buscar">
+            <button type="submit">buscar</button>
+        </div>
+    </form>
+</div>
+
 <div class="main-gallery-container">
     {% if pictures %}
         {% for picture in pictures %}
-            <div class="picture-container">
+            <div class="picture-container {{ picture.orientation }}">
                 <div class="picture-front-layer">
                     <a href="">
                         <div class="picture-anchor">
-                            <img src="{{ picture.picture.url }}">
+                            <img class="picture" src="{{ picture.picture.url }}">
                         </div>
                     </a>
                     <div class="picture-info">

@@ -11,10 +11,7 @@ def index(request):
 def main_gallery(request):
     if not request.user.is_authenticated:
         return redirect("login")
-
-    if request.method == "POST":
-        pass
-
+    
     pictures = Picture.objects.all()
 
     return render(request, 'gallery/main_gallery.html', {"pictures": pictures, "user_is_authenticated": True})

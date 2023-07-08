@@ -291,15 +291,26 @@ main.gallery .side-menu-container {
     padding: 0 40px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-start; 
 }
 
 .main-gallery-container .picture-container {
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 20px;
-    width: 350px;
-    height: 200px;
     overflow: hidden;
+    width: 270px;
+}
+
+.HORIZONTAL {
+    height: 180px;
+}
+
+.VERTICAL {
+    height: 400px;
+}
+
+.SQUARE {
+    height: 270px;
 }
 
 .main-gallery-container .picture-front-layer {
@@ -307,15 +318,28 @@ main.gallery .side-menu-container {
     height: 100%;
 }
 
-.main-gallery-container .picture-container img {
-    width: 100%;
-    height: auto;
-}
-
 .main-gallery-container .picture-anchor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     transition: 0.15s;
+}
+
+.HORIZONTAL .picture {
+    width: 270px;
+    height: 180px;
+}
+
+.VERTICAL .picture {
+    width: 100%;
+    height: 400px;
+}
+
+.SQUARE .picture {
+    width: 100%;
+    height: 270px;
 }
 
 .main-gallery-container .picture-anchor:hover {
@@ -361,6 +385,7 @@ main.gallery .side-menu-container {
     margin: 0 auto;
     color: var(--white);
     background-color: var(--blue);
+    transform: translateY(150px)
 }
 
 .upload-form-container h1 {
@@ -389,7 +414,7 @@ main.gallery .side-menu-container {
 
 .upload-form-container select {
     width: 30%;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     border-radius: 5px;
     border: none;
     outline: none;
@@ -397,6 +422,10 @@ main.gallery .side-menu-container {
     font-size: 11pt;
     background-color: var(--white);
     border: 2px solid var(--dark-blue);
+}
+
+.upload-form-container .last-input {
+    margin-bottom: 40px;
 }
 
 .upload-form-container button {
